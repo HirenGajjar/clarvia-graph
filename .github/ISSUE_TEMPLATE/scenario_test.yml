@@ -1,0 +1,46 @@
+name: "\U0001F9EA Scenario Test"
+description: Suggest a real-world scenario to test
+title: "[Scenario] "
+labels: ["scenario-test", "help-wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a real-world situation that Clarvia should handle correctly.
+        You don't need to write YAML — just describe the situation in plain language.
+  - type: input
+    id: life_event
+    attributes:
+      label: Life event
+      placeholder: "e.g., bereavement"
+    validations:
+      required: true
+  - type: textarea
+    id: situation
+    attributes:
+      label: Describe the situation
+      description: What happened? Where? Who is involved?
+      placeholder: |
+        A person who lived in Luxembourg died in Germany.
+        Their spouse lives in Luxembourg.
+        The deceased worked in Germany for 10 years.
+        There is real estate in France.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should the checklist include?
+      description: What steps do you expect Clarvia to show?
+      placeholder: |
+        - Death declaration in Germany (where death occurred)
+        - Luxembourg succession steps
+        - German survivor pension application
+        - French estate/inheritance steps
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (if known)
+      description: Any official sources that support these steps?

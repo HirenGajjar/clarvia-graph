@@ -1,0 +1,34 @@
+name: "\U000026A0 Stale Source Report"
+description: Report that an official source has changed or is no longer available
+title: "[Stale] "
+labels: ["stale-source", "good-first-issue"]
+body:
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: Link to the source that changed or is broken
+    validations:
+      required: true
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What happened?
+      options:
+        - Page content changed
+        - Page no longer exists (404)
+        - Page redirects to a different URL
+        - Page is temporarily unavailable
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What changed? When did you notice?
+  - type: input
+    id: assertion_id
+    attributes:
+      label: Related assertion ID (if known)
+      placeholder: "e.g., assertion.guichet_lu.death_declaration.deadline_24h"

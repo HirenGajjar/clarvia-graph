@@ -1,0 +1,29 @@
+name: "\U0001F41B Bug Report"
+description: Report an error in data, validation, or tooling
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the issue clearly
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the issue?
+  - type: input
+    id: record
+    attributes:
+      label: Related record ID (if applicable)
+      placeholder: "e.g., consequence.lu.bereavement.death_registration.declare_death"

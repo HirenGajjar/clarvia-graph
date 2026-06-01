@@ -1,0 +1,70 @@
+name: "\U0001F50D Source Discovery"
+description: Add a new official source for a jurisdiction
+title: "[Source] "
+labels: ["source-discovery", "good-first-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us find official government sources for administrative procedures.
+        You don't need to understand the graph model — just find the URL and fill in the details.
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      description: Which country or region?
+      placeholder: "e.g., BE (Belgium)"
+    validations:
+      required: true
+  - type: input
+    id: life_event
+    attributes:
+      label: Life event
+      description: Which life event does this source relate to?
+      placeholder: "e.g., bereavement"
+    validations:
+      required: true
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: What area does this cover?
+      placeholder: "e.g., death_registration, survivor_pension, succession"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official source URL
+      description: Link to the official government page
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Page title
+      description: Title of the page as displayed
+    validations:
+      required: true
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher
+      description: Who publishes this page?
+      placeholder: "e.g., Belgian federal portal, Guichet.lu"
+    validations:
+      required: true
+  - type: input
+    id: languages
+    attributes:
+      label: Available languages
+      description: What languages is the page available in?
+      placeholder: "e.g., fr, nl, de, en"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else relevant about this source?
