@@ -48,7 +48,7 @@ Clarvia maintains internal Clarvia-native schemas and generates compatibility vi
 
 ## Scope
 
-**v0.1 scope:** Bereavement, Luxembourg + France + Germany + EU layer
+**v0.1 technical validation scope:** Bereavement workflows, Luxembourg proof dataset, and minimal cross-border fixtures for France/Germany/EU concepts where needed to test jurisdiction composition.
 
 **Designed for extension to:** Additional jurisdictions (Belgium, Netherlands, ...) and life events (birth, relocation, ...) without schema changes.
 
