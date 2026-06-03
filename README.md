@@ -20,7 +20,19 @@ This repository contains:
 
 🔒 **Foundation specification locked** — The [foundation spec](https://github.com/clarvia-org/clarvia-graph/wiki) defines the complete data architecture, standards alignment, editorial governance, and extensibility model.
 
-🚧 **Implementation planned** — Schema drafting and tooling development will begin once funding is confirmed.
+🚧 **Early implementation in progress** — Proof-of-concept, alpha, and beta work is proceeding with internal resources to validate the foundation before funded hardening, validation, and scale-up phases.
+
+## Development model
+
+Clarvia Graph is being developed as the technical foundation for source-backed bereavement checklists and related administrative workflows across Europe.
+
+The project is moving through rapid proof-of-concept, alpha, and beta phases. Early versions are built with internal resources so that the data model, graph structure, validation approach, and export pipeline can be tested before larger funding cycles conclude.
+
+This early implementation work is not intended to replace funded development. It is intended to de-risk the technical foundation and demonstrate that the architecture can move from specification to working infrastructure.
+
+Future funded phases will focus on raising the foundation to production quality: schema refinement, validation tooling, source provenance, test coverage, interoperability, documentation, governance, security hardening, maintainability, and support for multiple jurisdictions.
+
+The intended path is to build quickly, learn from real implementation, and then use funded phases to validate, harden, document, and scale the graph responsibly.
 
 ## Architecture
 
