@@ -8,6 +8,7 @@
 
 import type { LoadedGraph } from "./loader.js";
 import type { TriValue } from "./evaluator.js";
+import { recordApplies, type TemporalContext } from "./temporal.js";
 
 export interface ConditionTrace {
   condition_ref: string;
@@ -36,6 +37,7 @@ export function buildExplanationTrace(
   conditionRefs: string[],
   conditionResults: Map<string, { result: TriValue; missingFacts: string[] }>,
   graph: LoadedGraph,
+  temporalCtx?: TemporalContext,
 ): ExplanationTrace {
   const conditions: ConditionTrace[] = [];
   const whyVisible: string[] = [];
@@ -67,22 +69,36 @@ export function buildExplanationTrace(
   // Gather sources from the consequence
   const consequence = graph.consequences.get(consequenceId);
   const sources: SourceTrace[] = [];
-  const seenSources = new Set<string>();
 
   if (consequence) {
+    // Group assertion refs by their owning source
+    const sourceAssertionMap = new Map<string, string[]>();
+
     for (const assertionRef of consequence.source_assertion_refs ?? []) {
-      // Find the source that contains this assertion
-      for (const [, source] of graph.sources ?? new Map()) {
-        if (!seenSources.has(source.id)) {
-          sources.push({
-            source_title: source.title ?? source.id,
-            publisher: source.publisher ?? "Unknown",
-            official_url: source.url ?? "",
-            assertion_refs: [assertionRef],
-          });
-          seenSources.add(source.id);
+      const ass = graph.assertions?.get(assertionRef);
+      if (ass && temporalCtx && !recordApplies(ass, temporalCtx)) {
+        continue;
+      }
+      // Use the assertion's source_id to find the owning source
+      const sourceId = ass?.source_id;
+      if (sourceId) {
+        const existing = sourceAssertionMap.get(sourceId);
+        if (existing) {
+          existing.push(assertionRef);
+        } else {
+          sourceAssertionMap.set(sourceId, [assertionRef]);
         }
       }
+    }
+
+    for (const [sourceId, assertionRefs] of sourceAssertionMap) {
+      const source = graph.sources?.get(sourceId);
+      sources.push({
+        source_title: source?.title ?? sourceId,
+        publisher: source?.publisher ?? "Unknown",
+        official_url: source?.url ?? "",
+        assertion_refs: assertionRefs,
+      });
     }
   }
 
