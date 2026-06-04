@@ -71,6 +71,8 @@ Clarvia maintains internal Clarvia-native schemas and generates compatibility vi
 - **ELI** — European Legislation Identifier
 - **PROV-O** — W3C Provenance Ontology
 
+> **Future export dependencies:** The PROV-O export pipeline considers using the excellent [`prov`](https://github.com/trungdong/prov) Python library.
+
 ## Scope
 
 **v0.1 technical validation scope:** Bereavement workflows, Luxembourg proof dataset, and minimal cross-border fixtures for France/Germany/EU concepts where needed to test jurisdiction composition.
