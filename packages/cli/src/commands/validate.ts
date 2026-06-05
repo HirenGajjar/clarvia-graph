@@ -566,6 +566,19 @@ function getNormalizedTextContent(html: string): string {
   let text = html.replace(/<!--[\s\S]*?-->/g, "");
   text = text.replace(/<(script|style)[\s\S]*?>[\s\S]*?<\/\1>/gi, " ");
   text = text.replace(/<[^>]+>/g, " ");
+  // Decode common HTML entities (aligned with check-anchors.ts)
+  text = text.replace(/&nbsp;/gi, " ");
+  text = text.replace(/&amp;/gi, "&");
+  text = text.replace(/&lt;/gi, "<");
+  text = text.replace(/&gt;/gi, ">");
+  text = text.replace(/&quot;/gi, '"');
+  text = text.replace(/&#39;/gi, "'");
+  text = text.replace(/&rsquo;/gi, "\u2019");
+  text = text.replace(/&lsquo;/gi, "\u2018");
+  text = text.replace(/&rdquo;/gi, "\u201C");
+  text = text.replace(/&ldquo;/gi, "\u201D");
+  text = text.replace(/&ndash;/gi, "\u2013");
+  text = text.replace(/&mdash;/gi, "\u2014");
   return normalizeText(text);
 }
 
