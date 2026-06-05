@@ -1,0 +1,36 @@
+# Scenario Test: Cross-border — LU resident dies in DE with FR assets
+# Validates the cross-border consequence graph when multiple jurisdictions
+# are involved: DE death registration, DE pension, LU succession, FR assets.
+
+id: scenario_test.xborder.lu_resident_de_death
+schema_version: "0.1.0"
+title: "Cross-border: LU resident dies in DE with FR assets"
+scenario_type: cross_border
+life_event: bereavement
+countries: [DE, LU, FR]
+
+facts:
+  - fact_type: death.place.country
+    value: DE
+  - fact_type: deceased.habitual_residence.country
+    value: LU
+  - fact_type: deceased.pension.jurisdiction
+    value: DE
+  - fact_type: estate.asset_location.country
+    value: FR
+
+# Expected consequence statuses:
+# - LU succession: applies (deceased had habitual residence in LU)
+# - LU death declaration: does_not_apply (death did not occur in LU)
+# - LU survivor pension: does_not_apply (deceased was not LU-insured)
+#
+# Note: DE consequences (register_death_de, claim_survivor_pension_de),
+# FR estate consequence (settle_fr_succession), and xborder pension
+# coordination are all distribution_status: restricted_source, so they
+# are excluded from public checklist generation per spec §10.6.
+# They will appear once their source assertions are approved and the
+# consequences are promoted to public_open.
+expected_consequence_statuses:
+  consequence.lu.bereavement.succession.file_inheritance_declaration: applies
+  consequence.lu.bereavement.death_registration.declare_death: does_not_apply
+  consequence.lu.bereavement.survivor_pension.claim_survivor_pension: does_not_apply
