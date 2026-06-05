@@ -43,9 +43,9 @@ jobs:
 
       - name: Create release archive
         run: |
-          cd .clarvia-output
-          tar -czf ../clarvia-graph-${{ github.ref_name }}.tar.gz .
-          cd ..
+          cd build/exports
+          tar -czf ../../clarvia-graph-${{ github.ref_name }}.tar.gz .
+          cd ../..
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -56,21 +56,10 @@ jobs:
             ## Clarvia Graph ${{ github.ref_name }}
 
             This release contains:
-            - `graph-export.json` — full graph data as JSON
+            - `json/` — full graph data as JSON
             - `web/manifest.json` — web runtime manifest
             - `web/intake/*.json` — intake question sets per life event
             - `web/runtime/*.json` — pre-compiled runtime data per life event
 
-            ### Usage
-
-            Download and extract `clarvia-graph-${{ github.ref_name }}.tar.gz`.
-
-            **For workflow-web integration:**
-            ```bash
-            tar -xzf clarvia-graph-${{ github.ref_name }}.tar.gz -C public/clarvia-data/
-            ```
-
-            **For API/analysis:**
-            ```bash
-            cat graph-export.json | jq '.stats'
-            ```
+            The web export zip (`clarvia-web-export-*.zip`) is attached separately
+            by the Release Web Export workflow.
