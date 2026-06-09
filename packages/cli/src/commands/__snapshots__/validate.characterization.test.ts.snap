@@ -700,12 +700,32 @@ exports[`runValidate characterization against real graph > pins schema assignmen
     "valid": true,
   },
   {
+    "file": "sources/snapshots/cnap_lu_survivor_pension_2026_06_04.yml",
+    "schema": "source_snapshot.schema.json",
+    "valid": true,
+  },
+  {
+    "file": "sources/snapshots/cns_lu_death_funeral_costs_2026_06_04.yml",
+    "schema": "source_snapshot.schema.json",
+    "valid": true,
+  },
+  {
     "file": "sources/snapshots/guichet_lu_bereavement_2026_06_03.yml",
     "schema": "source_snapshot.schema.json",
     "valid": true,
   },
   {
+    "file": "sources/snapshots/guichet_lu_bereavement_leave_2026_06_04.yml",
+    "schema": "source_snapshot.schema.json",
+    "valid": true,
+  },
+  {
     "file": "sources/snapshots/guichet_lu_declaration_succession_2026_06_05.yml",
+    "schema": "source_snapshot.schema.json",
+    "valid": true,
+  },
+  {
+    "file": "sources/snapshots/guichet_lu_funeral_allowance_2026_06_04.yml",
     "schema": "source_snapshot.schema.json",
     "valid": true,
   },
@@ -720,8 +740,8 @@ exports[`runValidate characterization against real graph > pins schema assignmen
 exports[`runValidate characterization against real graph > pins total file count and pass/fail breakdown 1`] = `
 {
   "invalid": 0,
-  "total": 142,
-  "valid": 142,
+  "total": 146,
+  "valid": 146,
 }
 `;
 
@@ -831,12 +851,32 @@ exports[`runValidate characterization against real graph > validates snapshot in
   },
   {
     "errorCount": 0,
+    "file": "sources/snapshots/guichet_lu_funeral_allowance_2026_06_04.yml",
+    "valid": true,
+  },
+  {
+    "errorCount": 0,
     "file": "sources/snapshots/guichet_lu_declaration_succession_2026_06_05.yml",
     "valid": true,
   },
   {
     "errorCount": 0,
+    "file": "sources/snapshots/guichet_lu_bereavement_leave_2026_06_04.yml",
+    "valid": true,
+  },
+  {
+    "errorCount": 0,
     "file": "sources/snapshots/guichet_lu_bereavement_2026_06_03.yml",
+    "valid": true,
+  },
+  {
+    "errorCount": 0,
+    "file": "sources/snapshots/cns_lu_death_funeral_costs_2026_06_04.yml",
+    "valid": true,
+  },
+  {
+    "errorCount": 0,
+    "file": "sources/snapshots/cnap_lu_survivor_pension_2026_06_04.yml",
     "valid": true,
   },
 ]

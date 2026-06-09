@@ -23,7 +23,7 @@ sources:
   - id: source.lu.cnap_survivor_pension
     title: "Pension de survie"
     title_en: "Survivor pension"
-    url: "https://www.cnap.lu/informations-generales/pension-de-survie/"
+    url: "https://cnap.public.lu/fr/pensions/pension-survie.html"
     source_type: official_guidance
     jurisdiction: LU
     publisher: "CNAP (Caisse Nationale d'Assurance Pension)"
@@ -79,3 +79,51 @@ sources:
     monitoring:
       active: false
     verified_at: null
+
+  - id: source.cns_lu.death_funeral_costs
+    title: "Décès et frais funéraires"
+    title_en: "Death and funeral costs"
+    url: "https://cns.public.lu/fr/assure/droits-demarches/dossiers-thematiques/famille/deces-frais-funeraires.html"
+    source_type: official_guidance
+    jurisdiction: LU
+    publisher: "CNS (Caisse Nationale de Santé)"
+    languages: [fr]
+    domain: funeral_costs
+    life_event: bereavement
+    source_role: primary_guidance
+    monitoring:
+      active: false
+    verified_at: "2026-06-04"
+    verified_by: HirenGajjar
+
+  - id: source.guichet_lu.funeral_allowance
+    title: "Indemnité funéraire"
+    title_en: "Funeral allowance"
+    url: "https://guichet.public.lu/fr/citoyens/aides/sante/prestations-survivants/indemnite-funeraire.html"
+    source_type: government_portal
+    jurisdiction: LU
+    publisher: "Guichet.lu (Luxembourg Government)"
+    languages: [fr]
+    domain: funeral_costs
+    life_event: bereavement
+    source_role: primary_guidance
+    monitoring:
+      active: false
+    verified_at: "2026-06-04"
+    verified_by: HirenGajjar
+
+  - id: source.guichet_lu.bereavement_leave
+    title: "Congé extraordinaire pour motif personnel"
+    title_en: "Extraordinary leave for personal reasons"
+    url: "https://guichet.public.lu/fr/citoyens/sante/fin-vie/deces/conge-extraordinaire.html"
+    source_type: government_portal
+    jurisdiction: LU
+    publisher: "Guichet.lu (Luxembourg Government)"
+    languages: [fr]
+    domain: bereavement_leave
+    life_event: bereavement
+    source_role: primary_guidance
+    monitoring:
+      active: false
+    verified_at: "2026-06-04"
+    verified_by: HirenGajjar

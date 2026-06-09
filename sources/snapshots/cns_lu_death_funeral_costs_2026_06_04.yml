@@ -1,0 +1,15 @@
+id: snapshot.cns_lu.death_funeral_costs.2026_06_04
+schema_version: "0.1.0"
+source_id: source.cns_lu.death_funeral_costs
+captured_at: "2026-06-04T00:00:00Z"
+capture_method: manual_download
+content_hash: "sha256:174e9ac0db05050f2510786a04d48e10d80bd7515e6b911c3c07d8a766e75997"
+archive_uri: "sources/snapshots/html/lu/cns_lu/death-funeral-costs/deces-frais-funeraires_fr.html"
+page_url: "https://cns.public.lu/fr/assure/droits-demarches/dossiers-thematiques/famille/deces-frais-funeraires.html"
+authoring_status: draft
+distribution_status: public_open
+record_valid_from: "2026-06-04"
+http_status: 200
+captured_by: "contributor.HirenGajjar"
+source_last_modified_at: null
+content_type: "text/html"

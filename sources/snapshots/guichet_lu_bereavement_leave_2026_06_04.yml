@@ -1,0 +1,15 @@
+id: snapshot.guichet_lu.bereavement_leave.2026_06_04
+schema_version: "0.1.0"
+source_id: source.guichet_lu.bereavement_leave
+captured_at: "2026-06-04T00:00:00Z"
+capture_method: manual_download
+content_hash: "sha256:bdadb9fac7acfc3492b761d8a6f57fad53cea488b73810dbea313bcf3a937a32"
+archive_uri: "sources/snapshots/html/lu/guichet_lu/bereavement-leave/conge-extraordinaire_fr.html"
+page_url: "https://guichet.public.lu/fr/citoyens/sante/fin-vie/deces/conge-extraordinaire.html"
+authoring_status: draft
+distribution_status: public_open
+record_valid_from: "2026-06-04"
+http_status: 200
+captured_by: "contributor.HirenGajjar"
+source_last_modified_at: null
+content_type: "text/html"

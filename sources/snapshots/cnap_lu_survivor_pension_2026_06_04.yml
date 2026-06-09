@@ -1,0 +1,15 @@
+id: snapshot.cnap_lu.survivor_pension.2026_06_04
+schema_version: "0.1.0"
+source_id: source.lu.cnap_survivor_pension
+captured_at: "2026-06-04T00:00:00Z"
+capture_method: manual_download
+content_hash: "sha256:45171e4c910779141e3eb0f4e7fbbc22108b9d61e7187fc0a0103d605ac1afe7"
+archive_uri: "sources/snapshots/html/lu/cnap_lu/survivor-pension/pension-survie_fr.html"
+page_url: "https://cnap.public.lu/fr/pensions/pension-survie.html"
+authoring_status: draft
+distribution_status: public_open
+record_valid_from: "2026-06-04"
+http_status: 200
+captured_by: "contributor.HirenGajjar"
+source_last_modified_at: null
+content_type: "text/html"
