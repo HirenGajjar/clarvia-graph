@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`export-json: runExportJson > pins record counts against snapshot 1`] = `
+{
+  "authorities": 22,
+  "conditions": 18,
+  "consequences": 19,
+  "deadlines": 10,
+  "evidence_types": 28,
+  "intake_fact_types": 15,
+  "task_templates": 19,
+  "total": 131,
+}
+`;
